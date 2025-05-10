@@ -26,7 +26,7 @@ pub fn main() !void {
     const main_file = try Directory.openFile(main_file_name, .{});
     defer main_file.close();
 
-    const ref_file = try Directory.openFile("themes_mom.txt", .{});
+    const ref_file = try Directory.openFile(ref_file_name, .{});
     defer ref_file.close();
 
     var arena = std.heap.ArenaAllocator.init(std.heap.page_allocator);
